@@ -1,0 +1,8 @@
+.phone {
+    font-size: 30px;
+    text-decoration: none;
+
+    @include media(w1024) {
+        
+    }
+}
