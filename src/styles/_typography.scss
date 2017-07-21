@@ -2,43 +2,26 @@ h1, h2, h3, h4, h5, h6, p {
     margin-bottom: 0.5em;
 }
 
-.xs {
-    font-size: 22px;
-
-    @include media(w1024) {
-        
-    }
-}
-
 .s {
-    font-size: 24px;
-}
-
-.m {
     font-size: 30px;
 }
 
+.m {
+    font-size: 40px;
+}
+
 .l {
-    font-size: 36px;
-}
-
-.xl {
-    font-size: 48px;
-}
-
-.xxl {
-    
-}
-
-
-.x {
-    
-}
-
-h2 {
-    font-size: 72px;
+    font-size: 45px;
 }
 
 h3 {
-    font-size: 60px;
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 55px;
+}
+
+h1 {
+    font-size: 80px;
 }

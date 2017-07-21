@@ -11,7 +11,7 @@ a {
         font-size: 25px;
 
         @include media(w1024) {
-            
+            font-size: 18px;
         }
     }
 }

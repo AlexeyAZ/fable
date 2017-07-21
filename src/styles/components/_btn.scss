@@ -1,10 +1,7 @@
 button {
     white-space: nowrap;
-
-    &.btn-round {
-        border: none;
-        outline: none;
-    }
+    border: none;
+    outline: none;
 }
 
 a {
@@ -16,9 +13,16 @@ a {
 }
 
 .btn-round {
-    background-color: $btn-main-bg;
+    background-color: $orange-main;
     border-radius: $btn-height-pc / 2;
     border-radius: calc(#{$btn-height-pc} / 2);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    // border-top: 2px solid lighten($orange-main, 20%);
+    // border-bottom: 2px solid darken($orange-main, 20%);
+    box-shadow: inset 0 -2px 1px rgba(0,0,0,0.4), inset 0 1px 1px lighten($orange-main, 20%);
     display: inline-block;
     cursor: pointer;
     color: white;
@@ -44,15 +48,11 @@ a {
     }
 
     &_download {
-        background-image: url("../img/icon-download.svg");
-        background-position: right 35px center;
-        background-repeat: no-repeat;
-        background-size: 50px;
-        padding-right: 100px;
         position: relative;
 
         &:after {
             content: "PDF, 20Mb";
+            font-family: "PFHandBookPro", Arial, Helvetica, sans-serif;
             font-size: 30px;
             position: absolute;
             left: calc(100% + 20px);
@@ -68,9 +68,7 @@ a {
         }
 
         @include media (w768) {
-            background-position: right 10px center;
-            background-size: 30px;
-            padding-right: 50px;
+            
         }
     }
 

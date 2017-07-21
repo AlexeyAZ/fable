@@ -1,23 +1,96 @@
 .header {
-    margin-bottom: 30px;
+    color: white;
+    margin-bottom: 70px;
+    padding-top: 40px;
+
+    @include media(w1600) {
+        padding-top: 20px;
+    }
 	
     &__container {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: top;
         width: 100%;
+
+        @include media(w768) {
+            flex-flow: wrap;
+            align-items: center;
+        }
     }
 
     &__logo-img {
-        
+        margin-top: -30px;
+        width: 100%;
+        max-width: 320px;
+
+        @include media(w1600) {
+            margin-top: -10px;
+        }
+
+        @include media(w1024) {
+            max-width: 190px;
+        }
+
+        @include media(w768) {
+            display: none;
+            max-width: 92px;
+        }
+
+        &_mobile-img {
+            display: none;
+
+            @include media(w768) {
+                display: block;
+            }
+        }
+
+        &_mobile-text {
+            display: none;
+
+            @include media(w768) {
+                display: block;
+            }
+        }
     }
 
     &__item {
+        width: calc(100% / 3);
+
+        &_descr {
+            font-size: 30px;
+
+            @include media(w1024) {
+                font-size: 18px;
+            }
+
+            @include media(w768) {
+                order: 2;
+                font-size: 15px;
+                width: auto;
+            }
+        }
+
+        &_logo {
+            text-align: center;
+
+            @include media(w768) {
+                order: 1;
+                text-align: left;
+            }
+        }
 
         &_contacts {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+
+            @include media(w768) {
+                flex-flow: row;
+                justify-content: space-between;
+                order: 3;
+                width: 100%;
+            }
         }
     }
 

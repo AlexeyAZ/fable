@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Небылица</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+    <link rel="stylesheet" href="styles/vendor.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;"></svg>
+    <div class="form-wrap form-wrap_small">
+      <div class="form-container" id="smallFormContainer">
+        <div class="form__close"></div>
+        <p class="form__heading">Оставьте заявку на презентацию франшизы</p>
+        <form class="form" id="smallForm" data-next="#bigForm">
+          <input class="form__input" type="text" name="name" placeholder="Ваше имя" required="">
+          <input class="form__input" type="text" name="phone" placeholder="Ваш телефон" required="">
+          <input class="form__input" type="email" name="email" placeholder="Ваш email" required="">
+          <button class="btn-round form__btn form__btn_size js-big-btn">Скачать</button>
+          <label class="form__label">
+            <input type="checkbox" checked required><span class="form__label-security-text">Нажимая кнопку «Скачать», я даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</span>
+          </label>
+        </form>
+      </div>
+    </div>
+    <div class="form-wrap form-wrap_big">
+      <div class="form-container" id="bigFormContainer">
+        <div class="form__close"></div>
+        <p class="form__title">Спасибо!</p>
+        <p class="form__descr">В ближайшее время мы обработаем Вашу заявку. Для того, чтобы наш специалист мог максимально подробно ответить на все Ваши вопросы, заполните, пожалуйста, следующую форму. Заранее благодарим</p>
+        <form class="form" method="POST" id="bigForm">
+          <input class="js-hidden-name" type="hidden" name="name1">
+          <input class="js-hidden-phone" type="hidden" name="phone1">
+          <input class="js-hidden-email" type="hidden" name="email1">
+          <label class="form__label"><span>Введите Ваш город</span>
+            <input class="form__input" type="text" name="city" placeholder="" required="">
+          </label>
+          <label class="form__label"><span>Введите Ваш возраст</span>
+            <input class="form__input" type="text" name="age" placeholder="" required="">
+          </label>
+          <label class="form__label"><span>Наличие бизнеса / Опыт бизнеса</span>
+            <select class="form__select" name="business">
+              <option value="yes">Да</option>
+              <option value="no">Нет</option>
+            </select>
+          </label>
+          <label class="form__label"><span>Объем планируемых инвестиций</span>
+            <select class="form__select" name="volume">
+              <option value="100 000 - 250 000">100 000 — 250 000 рублей</option>
+              <option value="250 000 - 500 000">250 000 — 500 000 рублей</option>
+              <option value="500 000 - 750 000">500 000 — 750 000 рублей</option>
+              <option value="750 000 - 1 000 000">750 000 — 1 000 000 рублей</option>
+              <option value="1 000 000 - 1 500 000">1 000 000 — 1 500 000 рублей</option>
+              <option value="1 500 000 - 3 000 000">1 500 000 — 3 000 000 рублей</option>
+              <option value="3 000 000">Более 3 000 000 рублей</option>
+            </select>
+          </label>
+          <button class="btn-round form__btn form__btn_center">Получить предложение</button>
+        </form>
+      </div>
+    </div>
+    <section class="sec sec1">
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__item header__item_descr"><img class="header__logo-img header__logo-img_mobile-text" src="img/header-logo-mobile-text.png" alt="">
+            <p class="mb0">Когда гостей больше,<br> чем мест в театре</p>
+          </div>
+          <div class="header__item header__item_logo"><a class="header__logo" href="/"><img class="header__logo-img" src="img/header-logo-pc.png" alt=""><img class="header__logo-img header__logo-img_mobile-img" src="img/header-logo-mobile-img.png" alt=""></a></div>
+          <div class="header__item header__item_contacts"><a class="header__link phone phone_white" href="tel:89375260820" data-phone="89375260820">+7 937 526-08-20</a><a class="header__link link link_getcall js-small-btn" href="">Заказать звонок</a></div>
+        </div>
+      </header><img class="sec1__curtain sec1__curtain_left" src="img/sec1-curtain.png" alt=""><img class="sec1__curtain sec1__curtain_right" src="img/sec1-curtain.png" alt=""><img class="sec1__clouds sec1__clouds_1" src="img/sec1-cloud1.png" alt=""><img class="sec1__clouds sec1__clouds_2" src="img/sec1-cloud2.png" alt=""><img class="sec1__clouds sec1__clouds_3" src="img/sec1-cloud3.png" alt=""><img class="sec1__women" src="img/sec1-women.png" alt="">
+      <div class="container ta-center">
+        <p class="m">Ставьте сказочные детские спектакли<br> и проводите интерактивные творческие занятия</p>
+        <h1 class="ff-appetite sec1__heading">с чистым доходом<br> 235 000 рублей в месяц</h1>
+        <button class="btn-round btn-round_download js-small-btn">Скачать презентацию</button>
+      </div>
+    </section>
+    <section class="sec sec2"><img class="sec2__content-bg-head" src="img/sec2-bg-head.png" alt="">
+      <div class="sec2__content">
+        <div class="container">
+          <div class="sec2__white-block">
+            <h3 class="ff-appetite color-orange">Родителям важно, чтобы<br> их дети всесторонне<br> развивались и при этом<br> с радостью посещали занятия</h3>
+            <p class="l">Именно поэтому растет спрос на детские<br> развлекательные центры с нестандартными<br> программами</p>
+            <p class="s">Однажды мы подумали: «А что, если совместить<br> театр и развивающие детские игры? Развлечение<br> с познанием мира и самого себя?»</p><img class="sec2__white-block-girl" src="img/sec2-girl.png" alt="">
+          </div>
+          <div class="ta-center">
+            <p class="l medium">
+              В результате три года назад<br> мы открыли интерактивный театр для детей<br> «Небылица»
+
+            </p>
+          </div>
+          <!--img(src="img/sec2-white-block.png", alt="").sec2__white-block-->
+        </div>
+      </div>
+    </section>
+    <section class="sec sec3">
+      <div class="container"></div>
+    </section>
+    <section class="sec sec4">
+      <div class="container"></div>
+    </section>
+    <section class="sec sec5">
+      <div class="container"></div>
+    </section>
+    <section class="sec sec6">
+      <div class="container"></div>
+    </section>
+    <section class="sec sec7">
+      <div class="container"></div>
+    </section>
+    <section class="sec sec8">
+      <div class="container"></div>
+    </section>
+    <section class="sec sec9">
+      <div class="container"></div>
+    </section>
+    <section class="sec sec10">
+      <div class="container">
+        <div class="bottom-form-container" id="bottomFormContainer">
+          <form class="bottom-form" data-next="#bigForm" id="bottomForm">
+            <label class="bottom-form__label">
+              <input class="input input_city" type="text" name="city" placeholder="Ваш город" required>
+            </label>
+            <label class="bottom-form__label">
+              <input class="input input_phone" type="text" name="phone" placeholder="Телефон" required>
+            </label>
+            <label class="bottom-form__label">
+              <input class="input" type="email" name="email" placeholder="E-mail" required>
+            </label>
+            <button class="btn-round bottom-form__btn">Проверить</button>
+            <label class="bottom-form__label">
+              <input type="checkbox" checked required><span>Нажимая кнопку «Проверить», я даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__block footer__block_social">
+          <p class="footer__text footer__text_copy">© 2017, «Уномоменто»</p>
+          <div class="footer__social">
+            <p class="footer__text footer__text_social-title">Мы в соц. сетях</p>
+            <ul class="footer__social-list">
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-vk"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-tripadvisor"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__block footer__block_contacts">
+          <p class="footer__text footer__text_adress">Наш офис: Пермь, ул. Шоссе Космонавтов, 111, корпус 2</p>
+          <div class="footer__contacts"><a class="footer__text footer__link footer__link_politic" href="doc/politic.pdf" target="_blank">Политика конфиденциальности</a>
+            <p class="footer__text">e-mail:<a class="footer__link" href="mailto:uno@uno-perm.ru">uno@uno-perm.ru</a></p>
+          </div>
+        </div>
+        <div class="footer__block footer__block_feedback"><a class="footer__phone" href="tel:89375260820" data-phone="89375260820">+7 937 526-08-20</a><a class="footer__link footer__link_getcall js-small-btn">Заказать звонок</a></div>
+      </div>
+    </footer>
+    <script src="scripts/vendor.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

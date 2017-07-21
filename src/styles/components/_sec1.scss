@@ -1,3 +1,57 @@
 .sec1 {
-    
+    background-image: url("../img/sec1-bg.png");
+    overflow: hidden;
+    padding-bottom: 200px;
+    color: white;
+    min-height: 100vh;
+    z-index: 1;
+
+    &__curtain { 
+        position: absolute;
+        top: 0;
+        height: 64vw;
+        min-height: 100%;
+        z-index: -1;
+
+        &_left {
+            left: 0;
+        }
+
+        &_right {
+            transform: scaleX(-1);
+            right: 0;
+        }
+    }
+
+    &__clouds {
+        position: absolute;
+        top: 0;
+        z-index: -2;
+
+        &_1 {
+            transform: translateY(-18%);
+            right: 70%;
+        }
+
+        &_2 {
+            transform: translateY(26%);
+            left: 68%;
+        }
+
+        &_3 {
+            transform: translateY(10%);
+            left: 75%;
+        }
+    }
+
+    &__women {
+        transform: translateY(5%);
+        position: absolute;
+        right: 62%;
+        width: 1200px;
+    }
+
+    &__heading {
+        margin-bottom: 200px;
+    }
 }

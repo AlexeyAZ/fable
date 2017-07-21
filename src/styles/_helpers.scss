@@ -10,8 +10,20 @@
     color: white;
 }
 
+.color-orange {
+    color: $orange-main;
+}
+
+.ff-appetite {
+    font-family: "Appetite", Arial, Helvetica, sans-serif;
+}
+
 .bold {
     font-weight: bold;
+}
+
+.medium {
+    font-weight: 500;
 }
 
 .mb0 {

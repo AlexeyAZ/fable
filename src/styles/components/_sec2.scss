@@ -1,3 +1,35 @@
 .sec2 {
+    z-index: 1;
     
+    &__content {
+        background-color: $yellow-main;
+        padding-top: 8%;
+    }
+
+    &__content-bg-head {
+        display: block;
+        margin-top: -3%;
+        width: 100%;
+    }
+
+    &__white-block {
+        background-image: url("../img/sec2-white-block.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: block;
+        margin-left: -100px;
+        margin-right: -100px;
+        padding-top: 94px;
+        padding-bottom: 90px;
+        padding-left: 100px;
+        padding-right: 100px;
+        position: relative;
+    }
+
+    &__white-block-girl {
+        position: absolute;
+        bottom: 2px;
+        left: 64%;
+    }
 }
