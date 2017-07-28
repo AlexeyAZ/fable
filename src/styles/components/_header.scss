@@ -2,9 +2,15 @@
     color: white;
     margin-bottom: 70px;
     padding-top: 40px;
+    position: relative;
+    z-index: 4;
 
     @include media(w1600) {
         padding-top: 20px;
+    }
+
+    @include media(w768) {
+        margin-bottom: 20px;
     }
 	
     &__container {
@@ -89,6 +95,8 @@
                 flex-flow: row;
                 justify-content: space-between;
                 order: 3;
+                border-bottom: 2px solid white;
+                padding-bottom: 10px;
                 width: 100%;
             }
         }
@@ -96,5 +104,10 @@
 
     &__link {
         color: white;
+
+        &:hover {
+            border-color: currentColor;
+            color: lighten($orange-main, 15%);
+        }
     }
 }

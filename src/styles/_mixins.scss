@@ -4,6 +4,14 @@
         @media only screen and (max-width: 1600px) { @content; }
     }
 
+    @else if $media == w1500 {
+        @media only screen and (max-width: 1500px) { @content; }
+    }
+
+    @else if $media == w1400 {
+        @media only screen and (max-width: 1400px) { @content; }
+    }
+
     @else if $media == w1366 {
         @media only screen and (max-width: 1366px) { @content; }
     }
@@ -26,6 +34,10 @@
 
     @else if $media == w500 {
         @media only screen and (max-width: 500px) { @content; }
+    }
+
+    @else if $media == w400 {
+        @media only screen and (max-width: 400px) { @content; }
     }
 }
 

@@ -1,8 +1,12 @@
 .footer {
 	background-color: $footer-bg;
     color: $footer-text;
-    font-size: 14px;
+    font-size: 18px;
     padding: 35px 0 30px;
+
+    @include media(w1024) {
+        font-size: 16px;
+    }
 
     @include media(w768) {
         padding: 25px 0 20px;
@@ -23,46 +27,22 @@
 
         &_social {
             flex-direction: column;
-            
-            @include media(w1024) {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                order: 3;
-                margin-top: 30px;
-                width: 100%;
-            }
 
             @include media(w768) {
-                flex-direction: column;
-                margin-top: 0;
+                align-items: center;
             }
         }
 
         &_contacts {
             flex-direction: column;
-
-            @include media(w1024) {
-                order: 1;
-            }
-
-            @include media(w768) {
-                align-items: center;
-                order: 2;
-            }
         }
 
         &_feedback {
             flex-direction: column;
             align-items: flex-end;
 
-            @include media(w1024) {
-                order: 2;
-            }
-
             @include media(w768) {
                 align-items: center;
-                order: 1;
             }
         }
 
@@ -108,15 +88,11 @@
     }
 
     &__social-item {
-        background-color: #9a9a9a;
-        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 14px;
-        margin-right: 4px;
-        height: 24px;
-        width: 24px;
+        font-size: 20px;
+        margin-right: 10px;
     }
     
     &__link {
@@ -128,6 +104,7 @@
 
         &:hover {
             border-color: currentColor;
+            color: lighten($orange-main, 15%);
         }
 
         &_social {
@@ -137,41 +114,52 @@
 
         &_politic {
             border-bottom: 1px solid currentColor;
-            margin-left: 30px;
 
             @include media(w1024) {
-                margin-left: 10px;
+                
             }
 
             @include media(w768) {
-                margin-right: 0;
+                
             }
         }
 
         &_getcall {
             border-bottom: 1px dotted currentColor;
             font-size: 18px;
+
+            @include media(w1024) {
+                font-size: 11px;
+            }
+
+            @include media(w768) {
+                font-size: 15px;
+            }
         }
     }
 
     &__contacts {
-        display: flex;
-
-        @include media(w768) {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        p {
-            order: -10;
-        }
+        text-align: center;
     }
 
     &__phone {
-        font-size: 30px;
+        font-size: 20px;
         transition: $trans;
         color: $footer-text;
-        line-height: 1;
+        line-height: 1.8;
         text-decoration: none;
+
+        @include media(w1024) {
+            font-size: 18px;
+        }
+
+        @include media(w768) {
+            font-size: 25px;
+        }
+
+        &:hover {
+            border-color: currentColor;
+            color: lighten($orange-main, 15%);
+        }
     }
 }

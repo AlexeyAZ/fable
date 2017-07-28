@@ -7,7 +7,32 @@ block content
     include components/form
     section.sec.thanks
         include components/header
-        div.container
+        img(src="img/sec1-curtain-top.png", alt="").sec1__curtain-top.sec1__curtain-top_left.
+        img(src="img/sec1-curtain-top.png", alt="").sec1__curtain-top.sec1__curtain-top_right
+        img(src="img/sec1-curtain-right.png", alt="").sec1__curtain-side.sec1__curtain-side_left.thanks__curtain
+        img(src="img/sec1-curtain-right.png", alt="").sec1__curtain-side.sec1__curtain-side_right.thanks__curtain
+        img(src="img/sec1-cloud1.png", alt="").sec1__clouds.sec1__clouds_1
+        img(src="img/sec1-cloud2.png", alt="").sec1__clouds.sec1__clouds_2.thanks__clouds
+        img(src="img/sec1-cloud3.png", alt="").sec1__clouds.sec1__clouds_3
+        img(src="img/sec7-cloud1.png", alt="").sec1__clouds.sec1__clouds_3-mobile.thanks__clouds
+        img(src="img/sec1-women.png", alt="").sec1__women.thanks__women
+        div.container.ta-center.thanks__container
+            p.thanks__heading.
+                <span id="thanksName"></span> менеджеры<br> уже занимаются<br> вашей заявкой
+            p.thanks__title.
+                Мы свяжемся с Вами в ближайшее время
+            p.thanks__subtitle.
+                График работы с 9.00 до 18.00.<br> Поэтому, если вы оставили заявку<br> в нерабочее время, мы перезвоним<br> вам на следующий рабочий день
+            //button.btn-round.btn-round_download.js-small-btn.
+                Скачать презентацию
+            div.thanks__buttons
+                a(href="doc/mk.pdf" target="_blank").btn-round.thanks__buttons-link.
+                    Скачать презентацию
+                a(href="/index.html").thanks__buttons-link.btn-round.btn-round_transparent.
+                    Вернуться на сайт
+
+
+        //div.container
             p.thanks__heading.
                 <span id="thanksName"></span> менеджеры уже занимаются вашей заявкой
             p.thanks__title.

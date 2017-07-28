@@ -24,13 +24,30 @@ var app = {
         var THANKS_LOCATION = "thanks.html";
         var name;
 
-        
-
         // form phone input handler
         $("input[name=phone]").inputmask({
             "mask": "+9(999)999-9999",
             greedy: false,
-            clearIncomplete: true
+            clearIncomplete: true,
+            "oncomplete": function(){
+                $(this).addClass("input_success");
+            },
+            onKeyDown: function(event, buffer) {
+
+                if (buffer[buffer.length - 1] === "_") {
+                    $(this).removeClass("input_success");
+                } else {
+                    $(this).addClass("input_success");
+                }
+            }
+        });
+
+
+        // gallery
+        $(".js-sec3-gallery").slick({
+            //arrows: false,
+            prevArrow: ".js-sec3-gallery-arrow-left",
+            nextArrow: ".js-sec3-gallery-arrow-right",
         });
 
 
@@ -178,7 +195,6 @@ var app = {
             document.querySelector('[name=email1]').value = userInfo.email;
 
             if (userInfo.city !== "" && userInfo.city) {
-                console.log(userInfo.city)
                 document.querySelector('[name=city]').value = userInfo.city;
             }
         }
@@ -324,9 +340,78 @@ var app = {
         function setUserName() {
             $("#thanksName").text(localStorage.getItem("landclientname"));
         }
+    },
+
+    imgLoad: function() {
+        
+        (function() {
+            if (document.documentElement.classList.contains("preloader-show")) {
+                document.documentElement.classList.remove("preloader-show")
+            }
+            
+        })();
+
+        // animations
+        (function() {
+            animate(".sec1__curtain-top", "sec1__curtain-top_before-ready");
+            animate(".sec1__clouds", "sec1__clouds_before-ready");
+            animate(".sec1__curtain-side", "sec1__curtain-side_before-ready");
+
+            checkViewport(".sec7__cloud_1", function() {
+                animate(".sec7__cloud_1", "sec7__cloud_before-ready", 0)
+            });
+
+            checkViewport(".sec7__cloud_2", function() {
+                animate(".sec7__cloud_2", "sec7__cloud_before-ready", 0)
+            });
+
+            function animate(elem, removeClass, dur) {
+                var elemDOM = document.querySelectorAll(elem);
+                var duration = dur || 500;
+
+                if (elemDOM) {
+
+                    setTimeout(function() {
+
+                        for (var i = 0; i < elemDOM.length; i++) {
+                            var elem = elemDOM[i];
+                            elem.classList.remove(removeClass);
+                        }
+                    }, duration);
+                }
+            }
+
+            function checkViewport(elem, callback) {
+                var screenHeight = document.documentElement.clientHeight;
+                var el = document.querySelector(elem);
+                var elBounding;
+                var elBottom;
+                //var elTop;
+
+                window.addEventListener("scroll", function() {
+                    // console.log("screenHeight: " + screenHeight);
+                    // console.log("elTop: " + elTop);
+                    // console.log("elBottom: " + elBottom);
+                    compareSizes();
+                });
+
+                compareSizes();
+
+                function compareSizes() {
+                    elBounding = el.getBoundingClientRect();
+                    elBottom = elBounding.bottom;
+                    //elTop = elBounding.top;
+
+                    if (elBottom <= screenHeight) {
+                        callback();
+                    }
+                }
+            }
+        })();
     }
 }
 
 app.preInit();
 document.addEventListener("DOMContentLoaded", app.init);
+window.addEventListener("load", app.imgLoad);
 

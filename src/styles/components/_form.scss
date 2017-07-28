@@ -2,6 +2,7 @@ $form-input-border: #8f8f8f;
 $form-input-bg: #e1e1e1;
 
 $form-input-height: 62px;
+$form-input-height-mobile: 36px;
 $form-input-padding: 25px;
 
 .form-wrap {
@@ -48,7 +49,9 @@ $form-input-padding: 25px;
     z-index: 100;
 
     @include media(w768) {
-        padding: 20px 20px 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 15px 20px 15px;
         width: 300px;
     }
 }
@@ -85,22 +88,33 @@ $form-input-padding: 25px;
     }
 
     &__heading {
-        font-size: 42px;
+        font-size: 40px;
         font-weight: bold;
+        line-height: 1;
         margin-bottom: 20px;
 
         @media screen and (max-width:768px) {
-            font-size: 32px;
+            font-size: 22px;
         }
     }
 
     &__title {
         font-size: 50px;
+
+        @include media(w768) {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
     }
 
     &__descr {
         font-size: 20px;
         margin-bottom: 50px;
+
+        @include media(w768) {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
     }
 
     &__label {
@@ -110,6 +124,10 @@ $form-input-padding: 25px;
         span {
             display: inline-block;
             margin-bottom: 4px;
+        }
+
+        @include media(w768) {
+            font-size: 15px;
         }
     }
 
@@ -121,11 +139,17 @@ $form-input-padding: 25px;
         background-color: $form-input-bg;
         border: 1px solid $form-input-border;
         color: #3f3e3c;
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 20px;
         padding: 0 $form-input-padding;
         height: $form-input-height;
         width: 100%;
+
+        @include media(w768) {
+            font-size: 16px;
+            margin-bottom: 15px;
+            height: $form-input-height-mobile;
+        }
     }
 
     &__input {
@@ -135,17 +159,24 @@ $form-input-padding: 25px;
         background-color: $form-input-bg;
         border: 1px solid $form-input-border;
         color: #3f3e3c;
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 20px;
         padding: 0 $form-input-padding;
         height: $form-input-height;
         width: 100%;
+
+        @include media(w768) {
+            font-size: 16px;
+            margin-bottom: 15px;
+            height: $form-input-height-mobile;
+        }
     }
 
     &__btn {
         margin-bottom: 20px;
         position: relative;
         font-size: 22px;
+        width: 100%;
 
         &_center {
             display: block;
@@ -171,6 +202,11 @@ $form-input-padding: 25px;
                     left: calc(100% + 20px);
                 }
             }
+        }
+
+        @include media(w768) {
+            padding-left: 5px;
+            padding-right: 5px;
         }
     }
 }

@@ -1,22 +1,122 @@
 .bottom-form-container {
+    color: white;
+    text-align: center;
+    margin-left: -8vw;
+    margin-right: -8vw;
+    padding: 12vw 5vw 10vw;
+    position: relative;
+    z-index: 1;
 
+    @include media(w1400) {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 8vw 5vw 6vw 3vw;
+    }
+
+    @include media(w1280) {
+        //left: 86vw;
+    }
+
+    @include media(w768) {
+        padding: 0;
+    }
 }
 .bottom-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 50px;
+        
+    @include media(w768) {
+        display: block;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        
+        @include media(w768) {
+            display: none;
+        }
+    }
+
+    &__title {
+        font-family: "Appetite", Arial, Helvetica, sans-serif;
+
+        @include media(w768) {
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__subtitle-wrap {
+        position: relative;
+    }
+
+    &__subtitle {
+        margin-bottom: 1em;
+
+        @include media(w1024) {
+            margin-bottom: 3em;
+        }
+
+        @include media (w768) {
+
+            br {
+                display: none;
+            }
+        }
+    }
 
     &__label {
         display: block;
+        padding: 0 10px;
+        width: 25%;
 
-        @include media (w768) {
-            
+        &_security {
+            width: 100%;
+            font-size: 16px;
         }
 
+        @include media (w768) {
+            margin-bottom: 20px;
+            width: auto;
+        }
+    }
+
+    &__input {
+
+        @include media(w1400) {
+            font-size: 18px;
+        }
+
+        @include media(w1024) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        @include media (w768) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
     &__btn {
         margin-bottom: 20px;
+        width: 100%;
+
+        @include media(w1400) {
+            font-size: 18px;
+        }
+
+        @include media(w1024) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
 }

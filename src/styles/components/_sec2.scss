@@ -1,9 +1,39 @@
 .sec2 {
     z-index: 1;
+
+    &__decor-line {
+        transform: translateX(-60px);
+        pointer-events: none;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        z-index: 0;
+
+        @include media(w1024) {
+            transform: translateX(-40px);
+            max-width: 800px;
+        }
+    }
     
     &__content {
         background-color: $yellow-main;
+        overflow: hidden;
         padding-top: 8%;
+        padding-bottom: 150px;
+        position: relative;
+
+        @include media(w1366) {
+            padding-top: 150px;
+        }
+
+        @include media(w1024) {
+            padding-top: 120px;
+        }
+
+        @include media(w768) {
+            padding-top: 80px;
+            padding-bottom: 70px;
+        }
     }
 
     &__content-bg-head {
@@ -25,11 +55,92 @@
         padding-left: 100px;
         padding-right: 100px;
         position: relative;
+
+        @include media(w1280) {
+            padding-right: 36vw;
+
+            br {
+                display: none;
+            }
+        }
+
+        @include media(w1024) {
+            margin-left: -50px;
+            margin-right: -40px;
+            padding-top: 56px;
+            padding-bottom: 60px;
+        }
+
+        @include media(w768) {
+            padding-left: $container-side-padding-tablet + 40px;
+            padding-right: 20vw;
+            padding-bottom: 40vw;
+        }
+    }
+
+    &__white-block-subtitle {
+
+        @include media(w768) {
+            padding-right: 5vw;
+        }
+    }
+
+    &__white-block-text {
+
+        @include media(w768) {
+            padding-right: 40vw;
+        }
     }
 
     &__white-block-girl {
         position: absolute;
         bottom: 2px;
         left: 64%;
+
+        @include media(w1024) {
+            height: 110%;
+        }
+
+        @include media(w768) {
+            transform: translateX(25%);
+            right: 0;
+            left: auto;
+            height: auto;
+            max-width: 300px;
+        }
+    }
+
+    &__notes {
+        position: absolute;
+        right: calc(103%);
+        top: 50%;
+
+        @include media(w768) {
+            display: none;
+        }
+    }
+
+    &__mask {
+        position: absolute;
+        top: calc(110%);
+        left: 0;
+
+        @include media(w1280) {
+            left: 5%;
+        }
+
+        @include media(w768) {
+            top: auto;
+            left: 10%;
+            bottom: 30px;
+            max-width: 100px;
+        }
+    }
+
+    &__btn {
+
+        &:after {
+            color: black;
+        }
     }
 }

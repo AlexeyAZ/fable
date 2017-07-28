@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="preloader-show">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
+    <div class="preloader"><div id="cssload-loader">
+<div class="cssload-dot"></div>
+<div class="cssload-dot"></div>
+<div class="cssload-dot"></div>
+<div class="cssload-dot"></div>
+<div class="cssload-dot"></div>
+<div class="cssload-dot"></div>
+<div class="cssload-dot"></div>
+<div class="cssload-dot"></div>
+</div>
+    </div>
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;"></svg>
     <div class="form-wrap form-wrap_small">
       <div class="form-container" id="smallFormContainer">
@@ -19,7 +30,7 @@
           <input class="form__input" type="text" name="name" placeholder="Ваше имя" required="">
           <input class="form__input" type="text" name="phone" placeholder="Ваш телефон" required="">
           <input class="form__input" type="email" name="email" placeholder="Ваш email" required="">
-          <button class="btn-round form__btn form__btn_size js-big-btn">Скачать</button>
+          <button class="btn-round form__btn js-big-btn">Скачать</button>
           <label class="form__label">
             <input type="checkbox" checked required><span class="form__label-security-text">Нажимая кнопку «Скачать», я даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</span>
           </label>
@@ -69,36 +80,57 @@
             <p class="mb0">Когда гостей больше,<br> чем мест в театре</p>
           </div>
           <div class="header__item header__item_logo"><a class="header__logo" href="/"><img class="header__logo-img" src="img/header-logo-pc.png" alt=""><img class="header__logo-img header__logo-img_mobile-img" src="img/header-logo-mobile-img.png" alt=""></a></div>
-          <div class="header__item header__item_contacts"><a class="header__link phone phone_white" href="tel:89375260820" data-phone="89375260820">+7 937 526-08-20</a><a class="header__link link link_getcall js-small-btn" href="">Заказать звонок</a></div>
+          <div class="header__item header__item_contacts"><a class="header__link phone phone_white" href="tel:89210608525" data-phone="89210608525">+7 921 060-85-25</a><a class="header__link link link_getcall js-small-btn" href="">Заказать звонок</a></div>
         </div>
-      </header>
-      <div class="container">
-        <p class="thanks__heading"><span id="thanksName"></span> менеджеры уже занимаются вашей заявкой</p>
+      </header><img class="sec1__curtain-top sec1__curtain-top_left" src="img/sec1-curtain-top.png" alt=""><img class="sec1__curtain-top sec1__curtain-top_right" src="img/sec1-curtain-top.png" alt=""><img class="sec1__curtain-side sec1__curtain-side_left thanks__curtain" src="img/sec1-curtain-right.png" alt=""><img class="sec1__curtain-side sec1__curtain-side_right thanks__curtain" src="img/sec1-curtain-right.png" alt=""><img class="sec1__clouds sec1__clouds_1" src="img/sec1-cloud1.png" alt=""><img class="sec1__clouds sec1__clouds_2 thanks__clouds" src="img/sec1-cloud2.png" alt=""><img class="sec1__clouds sec1__clouds_3" src="img/sec1-cloud3.png" alt=""><img class="sec1__clouds sec1__clouds_3-mobile thanks__clouds" src="img/sec7-cloud1.png" alt=""><img class="sec1__women thanks__women" src="img/sec1-women.png" alt="">
+      <div class="container ta-center thanks__container">
+        <p class="thanks__heading"><span id="thanksName"></span> менеджеры<br> уже занимаются<br> вашей заявкой</p>
         <p class="thanks__title">Мы свяжемся с Вами в ближайшее время</p>
-        <div class="thanks__buttons"><a class="btn-round btn-round_download" href="doc/mk.pdf" target="_blank">Открыть презентацию</a><a class="thanks__links-link" href="/index.html">Вернуться на сайт</a></div>
-        <p class="thanks__subtitle">График работы с 9.00 до 23.00 Поэтому, если вы оставили заявку в нерабочее время, мы перезвоним вам на следующий рабочий день</p>
+        <p class="thanks__subtitle">График работы с 9.00 до 18.00.<br> Поэтому, если вы оставили заявку<br> в нерабочее время, мы перезвоним<br> вам на следующий рабочий день</p>
+        <!--button.btn-round.btn-round_download.js-small-btn.Скачать презентацию
+        -->
+        <div class="thanks__buttons"><a class="btn-round thanks__buttons-link" href="doc/mk.pdf" target="_blank">Скачать презентацию</a><a class="thanks__buttons-link btn-round btn-round_transparent" href="/index.html">
+            Вернуться на сайт
+
+            </a></div>
       </div>
+      <!--div.container
+      p.thanks__heading.
+          <span id="thanksName"></span> менеджеры уже занимаются вашей заявкой
+      p.thanks__title.
+          Мы свяжемся с Вами в ближайшее время
+      div.thanks__buttons
+          a(href="doc/mk.pdf" target="_blank").btn-round.btn-round_download.
+              Открыть презентацию
+          a(href="/index.html").thanks__links-link.
+              Вернуться на сайт
+      p.thanks__subtitle.
+          График работы с 9.00 до 23.00 Поэтому, если вы оставили заявку в нерабочее время, мы перезвоним вам на следующий рабочий день
+      -->
     </section>
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer__block footer__block_social">
-          <p class="footer__text footer__text_copy">© 2017, «Уномоменто»</p>
+          <p class="footer__text footer__text_copy">© 2017, «Небылица»</p>
           <div class="footer__social">
             <p class="footer__text footer__text_social-title">Мы в соц. сетях</p>
             <ul class="footer__social-list">
-              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-vk"></i></a></li>
-              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-tripadvisor"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="https://vk.com/muzeyskazok" target="_blank"><i class="fa fa-vk"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="http://nebylica35.ru/" target="_blank"><i class="fa fa-globe"></i></a></li>
             </ul>
           </div>
         </div>
         <div class="footer__block footer__block_contacts">
-          <p class="footer__text footer__text_adress">Наш офис: Пермь, ул. Шоссе Космонавтов, 111, корпус 2</p>
+          <p class="footer__text footer__text_adress">Отдел по развитию: г. Вологда, ул. Новгородская, 2а</p>
           <div class="footer__contacts"><a class="footer__text footer__link footer__link_politic" href="doc/politic.pdf" target="_blank">Политика конфиденциальности</a>
-            <p class="footer__text">e-mail:<a class="footer__link" href="mailto:uno@uno-perm.ru">uno@uno-perm.ru</a></p>
+            <!--p.footer__text
+            |e-mail:
+            a(href="mailto:uno@uno-perm.ru").footer__link.
+                uno@uno-perm.ru
+            -->
           </div>
         </div>
-        <div class="footer__block footer__block_feedback"><a class="footer__phone" href="tel:89375260820" data-phone="89375260820">+7 937 526-08-20</a><a class="footer__link footer__link_getcall js-small-btn">Заказать звонок</a></div>
+        <div class="footer__block footer__block_feedback"><a class="footer__phone" href="tel:89210608525" data-phone="89210608525">+7 921 060-85-25</a><a class="footer__link footer__link_getcall js-small-btn">Заказать звонок</a></div>
       </div>
     </footer>
     <script src="scripts/vendor.js"></script>

@@ -1,2 +1,32 @@
+- var sec5List = [[1, "Права на использование бренда «Небылица» в вашем городе"],[4, "Рекламные материалы"],[2, "Консультация по вопросам ведения деятельности"],[5, "Должностные инструкции и внутренние документы"],[3, "Сценарии всех постановок и их регулярное обновление"],[6, "Помощь в изготовлении декораций, реквизита и костюмов"]];
+
 section.sec.sec5
-    div.container
+    img(src="img/sec5-curtain.svg", alt="").sec5__curtain.sec5__curtain_left
+    img(src="img/sec5-curtain.svg", alt="").sec5__curtain.sec5__curtain_right
+    img(src="img/decor-line5.png", alt="").sec5__decor-line.sec5__decor-line_top
+    div.container.ta-center
+        h2.bold.color-orange.ff-appetite.
+            Станьте партнером музея-театра<br> «Небылица» в Вашем городе
+        p.sec5__title.
+            Всё, что мы старательно разрабатывали на протяжении трех лет,<br> окажется в вашем распоряжении
+        p.l.medium.mb2.
+            Во франшизу включены:
+        div.sec5__list-wrap
+            img(src="img/sec5-line.png", alt="").sec5__list-line
+            div.sec5__list
+                each item in sec5List
+                    div.sec5__list-item
+                        div.sec5__list-number-wrap
+                            p.sec5__list-number.
+                                #{item[0]}
+                            img(src="img/sec5-btn" + (item[0] % 2 === 0 ? "1" : "2") + ".png", alt="").sec5__list-img
+                        div.sec5__list-text.
+                            #{item[1]}
+        p.l.medium.mb2.sec5__bottom-title.
+            С нашей поддержкой вы будете чувствовать,<br> что ваш бизнес в безопасности<br> с самого момента открытия
+    div.sec5__btn-wrap
+        div.container.ta-center
+            button.btn-round.btn-round_download.js-small-btn.sec5__btn.
+                Скачать презентацию
+        img(src="img/decor-line5-bottom.png", alt="").sec5__decor-line.sec5__decor-line_bottom
+    img(src="img/sec5-glasses.png", alt="").sec5__img

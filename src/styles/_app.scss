@@ -10,12 +10,29 @@
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 body {
     font-family: "PFHandBookPro", Arial, Helvetica, sans-serif;
     font-size: 30px;
     line-height: 1.2;
+    overflow-x: hidden;
+    //overflow-y: scroll;
     position: relative;
     min-width: 320px;
+
+    @include media(w768) {
+        font-size: 18px;
+    }
+}
+
+.preloader-show {
+    overflow: hidden;
+    height: 100vh;
+    
+    .preloader {
+        opacity: 1;
+        visibility: visible;
+    }
 }

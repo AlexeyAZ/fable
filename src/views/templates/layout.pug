@@ -1,12 +1,12 @@
 doctype html
 
 - var title = 'Project title';
-- var phone = "+7 937 526-08-20";
-- var attrPhone = "89375260820";
+- var phone = "+7 921 060 85-25";
+- var attrPhone = "89210608525";
 
 block vars
     
-html
+html.preloader-show
     head
         meta(charset="utf-8")
         meta(name="description", content="")
@@ -17,6 +17,7 @@ html
         link(rel="stylesheet", href="styles/main.css")
         block scripts
     body
+        include ../components/preloader
         include ../components/svg
         include ../components/mixins
         block content

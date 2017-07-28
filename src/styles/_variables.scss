@@ -5,29 +5,24 @@ $content-max-width: 1200px;
 $container-side-padding-pc: 30px;
 $container-side-padding-tablet: 18px;
 
-$input-font-size-pc: 25px;
-$input-font-size-tablet: 20px;
-$input-font-size-mobile: 20px;
+$input-font-size-pc: 30px;
+$input-font-size-tablet: 18px;
+$input-font-size-mobile: 22px;
 
-$btn-height-pc: 94px;
-$btn-height-tablet: 64px;
-$btn-height-mobile: 50px;
+$btn-height-pc: 98px;
+$btn-height-tablet: 78px;
+$btn-height-mobile: 78px;
 
-$btn-font-size-pc: $input-font-size-pc;
-$btn-font-size-tablet: $input-font-size-tablet;
-$btn-font-size-mobile: $input-font-size-mobile;
+$btn-font-size-pc: 32px;
+$btn-font-size-tablet: 25px;
+$btn-font-size-mobile: $btn-font-size-tablet;
 
-$btn-main-bg: #ff2727;
-$footer-bg: #2b2a28;
-$footer-text: #8e8e8e;
 
 $orange-main: #cb5906;
 $yellow-main: #fce21a;
+$blue-main: #4f7cbd;
+$gray-main: #f9f9f8;
 
-$color-main--lightest: #CBF3BF;
-$color-main--lighten:  #ACEF97;
-$color-main--light:    #74EA4F;
-$color-main:           #3FD411;
-$color-main--dark:     #39BA11;
-$color-main--darken:   #329F11;
-$color-main--darkest:  #184B09;
+$btn-main-bg: #ff2727;
+$footer-bg: $blue-main;
+$footer-text: white;

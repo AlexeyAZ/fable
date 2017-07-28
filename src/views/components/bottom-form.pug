@@ -1,14 +1,21 @@
 div#bottomFormContainer.bottom-form-container
+    img(src="img/sec7-form-bg.png", alt="").bottom-form__bg
+    h2.bottom-form__title.
+        Сделайте первый шаг к открытию<br> любимого театра для детей<br> от 1 до 12 лет сегодня
+    div.bottom-form__subtitle-wrap
+        p.medium.l.bottom-form__subtitle.
+            Проверьте, свободен ли ваш город для открытия<br> театра уже через три месяца?
     form(data-next="#bigForm")#bottomForm.bottom-form
         label.bottom-form__label
-            input(type="text" name="city" placeholder="Ваш город" required).input.input_city
+            input(type="text" name="city" placeholder="Ваш город" required).input.bottom-form__input
         label.bottom-form__label
-            input(type="text" name="phone" placeholder="Телефон" required).input.input_phone
+            input(type="text" name="phone" placeholder="Телефон" required).input.bottom-form__input.input_phone
         label.bottom-form__label
-            input(type="email" name="email" placeholder="E-mail" required).input
-        button.btn-round.bottom-form__btn.
-            Проверить
+            input(type="email" name="email" placeholder="E-mail" required).input.bottom-form__input
         label.bottom-form__label
+            button.btn-round.bottom-form__btn.
+                Проверить
+        label.bottom-form__label.bottom-form__label_security
             input(type="checkbox" checked required)
             span.
                 Нажимая кнопку "Проверить", я даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности

@@ -1,3 +1,23 @@
 .sec4 {
-    
+    background-image: url("../img/sec4-bg.png");
+    background-position: center top;
+    margin-top: -70px;
+    padding: 250px 0 10vw;
+    z-index: 2;
+
+    @include media(w768) {
+        padding: 150px 0 100px;
+    }
+
+    &__decor-line {
+        transform: translate(-46%, -180px);
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        @include media(w768) {
+            max-width: 2000px;
+        }
+    }
 }

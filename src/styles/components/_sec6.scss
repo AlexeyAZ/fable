@@ -1,3 +1,137 @@
 .sec6 {
+    overflow: hidden;
+    margin-top: -80px;
+    z-index: 1;
     
+    &__top-bg {
+        display: block;
+        width: 100%;
+    }
+
+    &__content {
+        background-color: $blue-main;
+        padding: 10vw 0 80px;
+
+        @include media(w768) {
+            padding: 80px 0 80px;
+        }
+    }
+
+    &__note {
+        margin: 0 -50px 20px -150px;
+        padding: 70px 0 50px 150px;
+        position: relative;
+        z-index: 1;
+
+        @include media(w1500) {
+            margin: 0 0 20px 0;
+            padding: 70px 0 50px 50px;
+        }
+
+        @include media(w1024) {
+            padding: 30px 0 30px 50px;
+        }
+
+        @include media(w768) {
+            background-color: white;
+            text-align: center;
+            margin-left: -$container-side-padding-tablet;
+            margin-right: -$container-side-padding-tablet;
+            padding-left: $container-side-padding-tablet;
+            padding-right: $container-side-padding-tablet;
+        }
+    }
+
+    &__note-bg {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+
+        @include media(w768) {
+            display: none;
+        }
+    }
+
+    &__note-text {
+        width: 70%;
+
+        @include media(w768) {
+            width: auto;
+        }
+    }
+
+    &__note-title {
+        white-space: nowrap;
+
+        @include media(w768) {
+            white-space: normal;
+        }
+    }
+
+    &__note-wallet {
+        position: absolute;
+        top: 50%;
+        right: -40px;
+
+        @include media(w1500) {
+            max-width: 40%;
+        }
+
+        @include media(w1280) {
+            right: 0;
+            max-width: 30%;
+        }
+
+        @include media(w1024) {
+            top: auto;
+            bottom: -20%;
+        }
+
+        @include media(w768) {
+            display: none;
+        }
+    }
+
+    &__undertitle {
+        margin-bottom: 100px;
+        width: 60%;
+
+        @include media(w1024) {
+            margin-bottom: 50px;
+        }
+
+        @include media(w768) {
+            text-align: center;
+            margin-bottom: 30px;
+            width: auto;
+        }
+    }
+
+    &__btn-wrap {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__btn {
+        
+    }
+
+    &__decor-line {
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+
+        @include media(w768) {
+            transform: translateY(-70%);
+            min-width: 800px;
+            width: auto;
+        }
+    }
 }

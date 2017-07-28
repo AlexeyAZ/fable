@@ -1,16 +1,58 @@
 .thanks {
-    background-image: url("../img/sec1-bg.jpg");
+    background-image: url("../img/sec1-bg.png");
+    color: white;
+    overflow: hidden;
     padding-top: 30px;
     padding-bottom: 160px;
+    min-height: 100vh;
 
-    @include media(w1024) {
-        padding-bottom: 200px;
+    @include media(w768) {
+        padding-bottom: 0;
+        min-height: auto;
+    }
+
+    &__curtain {
+
+        @include media(w1024) {
+            display: none;
+        }
+    }
+
+    &__clouds {
+        
+        @include media(w1024) {
+            display: none;
+        }
+    }
+
+    &__women {
+        transform: translateY(14%);
+
+        @include media(w1366) {
+            transform: translateY(24%);
+        }
+
+        @include media(w1024) {
+            transform: translateY(40%);
+        }
+
+        @include media(w768) {
+            display: none;
+        }
+    }
+
+    &__container {
+
+        @include media(w768) {
+            padding-top: 12vw
+        }
     }
 
     &__heading {
-        border-bottom: 2px solid white;
+        font-family: "Appetite", Arial, Helvetica, sans-serif;
         font-weight: 800;
-        font-size: 75px;
+        font-size: 60px;
+        text-transform: uppercase;
         padding-bottom: 0.4em;
 
         @include media(w1024) {
@@ -18,12 +60,18 @@
         }
 
         @include media(w768) {
-            font-size: 40px;
+            font-size: 30px;
+            margin-bottom: 10px;
+            padding-bottom: 0;
+
+            br {
+                display: none;
+            }
         }
     }
 
     &__title {
-        font-size: 58px;
+        font-size: 40px;
         margin-bottom: 1em;
 
         @include media(w1024) {
@@ -31,20 +79,23 @@
         }
 
         @include media(w768) {
-            font-size: 30px;
+            font-size: 20px;
+            margin-bottom: 10px;
         }
     }
 
     &__subtitle {
-        font-size: 38px;
+        font-size: 35px;
         margin-bottom: 1em;
+        position: relative;
+        z-index: 4;
 
         @include media(w1024) {
             font-size: 30px;
         }
 
         @include media(w768) {
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 
@@ -53,7 +104,9 @@
         align-items: center;
         justify-content: center;
         margin: 0 auto 30px;
+        position: relative;
         width: 100%;
+        z-index: 4;
 
         @include media(w768) {
             flex-direction: column;
@@ -61,14 +114,10 @@
     }
 
     &__buttons-link {
-        color: white;
-        font-size: 30px;
-        margin-left: 60px;
+        margin: 0 10px;
 
         @include media(w768) {
-            font-size: 20px;
-            margin-left: 0;
-            margin-top: 20px;
+            margin: 10px 0;
         }
     }
 

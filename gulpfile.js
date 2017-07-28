@@ -11,11 +11,12 @@ var plugins = {
         'bower_components/jquery/dist/jquery.min.js',
         'bower_components/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js',
         'bower_components/mobile-detect/mobile-detect.min.js',
-        'bower_components/rangeslider.js/dist/rangeslider.min.js',
+        'bower_components/slick-carousel/slick/slick.min.js',
         'bower_components/webshim/js-webshim/minified/polyfiller.js',
     ],
     css: [
-        'bower_components/reset-css/reset.css','bower_components/rangeslider.js/dist/rangeslider.css',
+        'bower_components/reset-css/reset.css',
+        'bower_components/slick-carousel/slick/slick.css',
     ]
 }
 

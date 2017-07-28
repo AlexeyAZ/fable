@@ -13,6 +13,7 @@ a {
 }
 
 .btn-round {
+    transition: $trans;
     background-color: $orange-main;
     border-radius: $btn-height-pc / 2;
     border-radius: calc(#{$btn-height-pc} / 2);
@@ -47,6 +48,16 @@ a {
         height: $btn-height-mobile;
     }
 
+    &_transparent {
+        background-color: transparent;
+        box-shadow: none;
+        border: 5px solid white;
+
+        &:hover {
+            border-color: lighten($orange-main, 5%);
+        }
+    }
+
     &_download {
         position: relative;
 
@@ -63,12 +74,12 @@ a {
             }
 
             @include media (w768) {
-                content: none;
+                //content: none;
+                transform: translateX(-50%);
+                font-size: 18px;
+                left: 50%;
+                top: calc(100% + 10px);
             }
-        }
-
-        @include media (w768) {
-            
         }
     }
 
@@ -81,6 +92,10 @@ a {
             left: 50%;
             top: calc(100% + 10px);
         }
+    }
+
+    &:hover {
+        background-color: lighten($orange-main, 5%);
     }
 
     &_clear {
