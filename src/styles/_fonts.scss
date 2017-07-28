@@ -12,12 +12,7 @@
 
 @font-face {
     font-family: "PFHandBookPro";
-    src: url("../fonts/PFHandBookPro/PFHandbookPro-Medium.eot");
-    src: url("../fonts/PFHandBookPro/PFHandbookPro-Medium.eot?#iefix")format("embedded-opentype"),
-    url('../fonts/PFHandBookPro/PFHandbookPro-Medium.woff2') format('woff2'),
-    url("../fonts/PFHandBookPro/PFHandbookPro-Medium.woff") format("woff"),
-    url("../fonts/PFHandBookPro/PFHandbookPro-Medium.ttf") format("truetype"),
-    url('../fonts/PFHandBookPro/PFHandbookPro-Medium.svg#svgFontName') format('svg');
+    src: url("../fonts/PFHandBookPro/PFHandbookPro-Medium.ttf") format("truetype");
     font-style: normal;
     font-weight: 500;
 }
