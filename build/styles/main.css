@@ -2700,8 +2700,8 @@ a.btn-round {
     .btn-round {
       border-radius: 39px;
       border-radius: calc(78px / 2);
-      font-size: 25px;
-      padding: 0 20px;
+      font-size: 22px;
+      padding: 0 15px;
       height: 78px; } }
   .btn-round_transparent {
     background-color: transparent;
@@ -4057,9 +4057,9 @@ a {
   .sec5__list-line {
     display: none;
     position: absolute;
-    top: 0;
+    top: 20px;
     left: 30px;
-    height: calc(100% - 30px);
+    height: calc(100% - 60px);
     width: calc(100% - 30px);
     z-index: -1; }
     @media only screen and (max-width: 768px) {
